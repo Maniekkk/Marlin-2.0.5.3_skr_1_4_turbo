@@ -494,7 +494,7 @@
  * in X2. Dual endstop offsets can be set at runtime with 'M666 X<offset> Y<offset> Z<offset>'.
  */
 
-//#define X_DUAL_STEPPER_DRIVERS
+#define X_DUAL_STEPPER_DRIVERS
 #if ENABLED(X_DUAL_STEPPER_DRIVERS)
   #define INVERT_X2_VS_X_DIR true   // Set 'true' if X motors should rotate in opposite directions
   //#define X_DUAL_ENDSTOPS
@@ -504,7 +504,7 @@
   #endif
 #endif
 
-//#define Y_DUAL_STEPPER_DRIVERS
+#define Y_DUAL_STEPPER_DRIVERS
 #if ENABLED(Y_DUAL_STEPPER_DRIVERS)
   #define INVERT_Y2_VS_Y_DIR true   // Set 'true' if Y motors should rotate in opposite directions
   //#define Y_DUAL_ENDSTOPS
@@ -746,7 +746,7 @@
 // Default stepper release if idle. Set to 0 to deactivate.
 // Steppers will shut down DEFAULT_STEPPER_DEACTIVE_TIME seconds after the last move when DISABLE_INACTIVE_? is true.
 // Time can be set by M18 and M84.
-#define DEFAULT_STEPPER_DEACTIVE_TIME 120
+#define DEFAULT_STEPPER_DEACTIVE_TIME 1200
 #define DISABLE_INACTIVE_X true
 #define DISABLE_INACTIVE_Y true
 #define DISABLE_INACTIVE_Z true  // Set to false if the nozzle will fall down on your printed part when print has finished.
@@ -1631,9 +1631,9 @@
 //
 #define ARC_SUPPORT                 // Disable this feature to save ~3226 bytes
 #if ENABLED(ARC_SUPPORT)
-  #define MM_PER_ARC_SEGMENT      1 // (mm) Length (or minimum length) of each arc segment
-  //#define ARC_SEGMENTS_PER_R    1 // Max segment length, MM_PER = Min
-  #define MIN_ARC_SEGMENTS       24 // Minimum number of segments in a complete circle
+  #define MM_PER_ARC_SEGMENT     .2 // (mm) Length (or minimum length) of each arc segment
+  #define ARC_SEGMENTS_PER_R      1 // Max segment length, MM_PER = Min
+  //#define MIN_ARC_SEGMENTS     24 // Minimum number of segments in a complete circle
   //#define ARC_SEGMENTS_PER_SEC 50 // Use feedrate to choose segment length (with MM_PER_ARC_SEGMENT as the minimum)
   #define N_ARC_CORRECTION       25 // Number of interpolated segments between corrections
   //#define ARC_P_CIRCLES           // Enable the 'P' parameter to specify complete circles

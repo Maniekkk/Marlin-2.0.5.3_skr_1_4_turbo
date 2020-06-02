@@ -132,7 +132,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-//#define CUSTOM_MACHINE_NAME "3D Printer"
+#define CUSTOM_MACHINE_NAME "V1 MPCNC"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -142,7 +142,7 @@
 
 // This defines the number of extruders
 // :[1, 2, 3, 4, 5, 6, 7, 8]
-#define EXTRUDERS 1
+#define EXTRUDERS 0
 
 // Generally expected filament diameter (1.75, 2.85, 3.0, ...). Used for Volumetric, Filament Width Sensor, etc.
 #define DEFAULT_NOMINAL_FILAMENT_DIA 3.0
@@ -406,7 +406,7 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
-#define TEMP_SENSOR_0 1
+#define TEMP_SENSOR_0 999
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -673,13 +673,13 @@
 #define X_DRIVER_TYPE  TMC2130
 #define Y_DRIVER_TYPE  TMC2130
 #define Z_DRIVER_TYPE  TMC2130
-//#define X2_DRIVER_TYPE TMC2130
-//#define Y2_DRIVER_TYPE TMC2130
+#define X2_DRIVER_TYPE TMC2130
+#define Y2_DRIVER_TYPE TMC2130
 //#define Z2_DRIVER_TYPE A4988
 //#define Z3_DRIVER_TYPE A4988
 //#define Z4_DRIVER_TYPE A4988
 //#define E0_DRIVER_TYPE TMC2130
-//#define E1_DRIVER_TYPE A4988
+//#define E1_DRIVER_TYPE TMC2130
 //#define E2_DRIVER_TYPE A4988
 //#define E3_DRIVER_TYPE A4988
 //#define E4_DRIVER_TYPE A4988
